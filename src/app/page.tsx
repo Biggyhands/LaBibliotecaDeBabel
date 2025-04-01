@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <HeroSection />
-      <BooksPreviewSection />
+      {/*  <BooksPreviewSection />  working on what to display here */}
       <HowItWorksSection />
       <JoinCommunitySection />
       <AuthorQuoteSection />
