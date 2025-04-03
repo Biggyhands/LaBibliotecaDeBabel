@@ -33,18 +33,27 @@ export function JoinCommunitySection() {
           onValueChange={handleToggleAll}
           className="grid md:grid-cols-3 gap-8"
         >
+          {/* Item ¡Conviértete en un lector! */}
+
           <AccordionItem
             value="item-1"
             className="bg-white p-6 rounded-lg shadow-sm border-0"
           >
-            <div className="flex flex-col items-center mb-4">
+            <div className="flex flex-col items-center mb-4 ">
               <div className="w-16 h-16 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
                 <Glasses className="w-8 h-8 text-gray-600" />
               </div>
-              <AccordionTrigger className="hover:no-underline p-0 text-center">
-                <h3 className="font-semibold">¡Conviértete en un lector!</h3>
+
+              {/* Activador del acordion  */}
+
+              <AccordionTrigger className="hover:no-underline p-0 text-center cursor-pointer">
+                <h3 className="font-semibold cursor-pointer">
+                  ¡Conviértete en un lector!
+                </h3>
               </AccordionTrigger>
             </div>
+
+            {/* Contenido del acordion */}
             <AccordionContent className="pt-0">
               <div className="flex justify-center">
                 <ul className="list-disc space-y-2 text-gray-600 inline-block text-left">
@@ -57,6 +66,9 @@ export function JoinCommunitySection() {
               </div>
             </AccordionContent>
           </AccordionItem>
+          {/* -- */}
+
+          {/* Item Conoce nuestro programa de afiliados*/}
 
           <AccordionItem
             value="item-2"
@@ -66,12 +78,17 @@ export function JoinCommunitySection() {
               <div className="w-16 h-16 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
                 <BookmarkCheck className="w-8 h-8 text-gray-600" />
               </div>
-              <AccordionTrigger className="hover:no-underline p-0 text-center">
-                <h3 className="font-semibold">
+              {/* Activador del acordion  */}
+
+              <AccordionTrigger className="hover:no-underline p-0 text-center cursor-pointer">
+                <h3 className="font-semibold cursor-pointer">
                   Conoce nuestro programa de afiliados
                 </h3>
               </AccordionTrigger>
             </div>
+
+            {/* Contenido del acordion */}
+
             <AccordionContent className="pt-0">
               <div className="flex justify-center">
                 <ul className="list-disc space-y-2 text-gray-600 inline-block text-left">
@@ -85,6 +102,10 @@ export function JoinCommunitySection() {
             </AccordionContent>
           </AccordionItem>
 
+          {/* -- */}
+
+          {/* Item Únete a nuestro equipo*/}
+
           <AccordionItem
             value="item-3"
             className="bg-white p-6 rounded-lg shadow-sm border-0"
@@ -93,10 +114,17 @@ export function JoinCommunitySection() {
               <div className="w-16 h-16 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
                 <Users className="w-8 h-8 text-gray-600" />
               </div>
-              <AccordionTrigger className="hover:no-underline p-0 text-center">
-                <h3 className="font-semibold">Únete a nuestro equipo</h3>
+              {/* Activador del acordion  */}
+
+              <AccordionTrigger className="hover:no-underline p-0 text-center cursor-pointer">
+                <h3 className="font-semibold cursor-pointer">
+                  Únete a nuestro equipo
+                </h3>
               </AccordionTrigger>
             </div>
+
+            {/* Contenido del acordion */}
+
             <AccordionContent className="pt-0">
               <div className="flex justify-center">
                 <ul className="list-disc space-y-2 text-gray-600 inline-block text-left">
@@ -109,6 +137,7 @@ export function JoinCommunitySection() {
               </div>
             </AccordionContent>
           </AccordionItem>
+          {/* -- */}
         </Accordion>
       </div>
     </section>
