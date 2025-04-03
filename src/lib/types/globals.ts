@@ -47,3 +47,10 @@ export interface ContactDetails {
   hours: HoursInfo;
 }
 // *------*//
+
+// Utilizado para las tecnologias en el componente de creditos
+
+export interface TechnologyInfo {
+  name: string;
+  icon: React.ReactNode;
+}

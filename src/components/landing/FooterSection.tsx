@@ -79,8 +79,8 @@ export function FooterSection() {
             >
               Contáctanos
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900">
-              Best practices
+            <Link href="/credits" className="text-gray-600 hover:text-gray-900">
+              Creditos
             </Link>
           </div>
         </div>
