@@ -73,7 +73,10 @@ export function FooterSection() {
             <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">
               Más sobre nosotros
             </Link>
-            <Link href="/aboutus" className="text-gray-600 hover:text-gray-900">
+            <Link
+              href="/contactus"
+              className="text-gray-600 hover:text-gray-900"
+            >
               Contáctanos
             </Link>
             <Link href="#" className="text-gray-600 hover:text-gray-900">

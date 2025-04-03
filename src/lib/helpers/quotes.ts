@@ -1,7 +1,4 @@
-interface Quote {
-  autor: string;
-  frase: string;
-}
+import { Quote } from "@/lib/types/globals";
 
 export const quotes: Quote[] = [
   {
