@@ -22,10 +22,10 @@ export function Navbar() {
         </Link>
         <div className="ml-auto flex items-center space-x-4">
           <Button variant="ghost" asChild>
-            <Link href="/signin">Sign in</Link>
+            <Link href="/signin">Ingresar</Link>
           </Button>
           <Button asChild>
-            <Link href="/register">Register</Link>
+            <Link href="/register">Registrarse</Link>
           </Button>
         </div>
       </div>
