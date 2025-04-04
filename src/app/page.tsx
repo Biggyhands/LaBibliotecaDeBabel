@@ -1,38 +1,28 @@
-import { Navbar } from "@/components/landing/Navbar";
+import { AuthorQuoteSection } from "@/components/landing/AuthorQuoteSection";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { JoinCommunitySection } from "@/components/landing/JoinCommunitySection";
-import { AuthorQuoteSection } from "@/components/landing/AuthorQuoteSection";
-import { FooterSection } from "@/components/landing/FooterSection";
-import { BooksPreviewSection } from "@/components/landing/BooksPreviewSection";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col min-h-screen">
-      {/*Header de la pagina*/}
-      <Navbar />
+	return (
+		<div className='flex flex-col min-h-screen'>
+			{/*Titulo principal con logo de la pagina*/}
 
-      {/*Titulo principal con logo de la pagina*/}
+			<HeroSection />
 
-      <HeroSection />
+			{/*         <BooksPreviewSection /> working on what to display here */}
 
-      {/*         <BooksPreviewSection /> working on what to display here */}
+			{/*Section cómo funciona*/}
 
-      {/*Section cómo funciona*/}
+			<HowItWorksSection />
 
-      <HowItWorksSection />
+			{/*Section  Unete a nuestra comunidad*/}
 
-      {/*Section  Unete a nuestra comunidad*/}
+			<JoinCommunitySection />
 
-      <JoinCommunitySection />
+			{/*Componente Frase de autor*/}
 
-      {/*Componente Frase de autor*/}
-
-      <AuthorQuoteSection />
-
-      {/*Footer de la pagina*/}
-
-      <FooterSection />
-    </div>
-  );
+			<AuthorQuoteSection />
+		</div>
+	);
 }

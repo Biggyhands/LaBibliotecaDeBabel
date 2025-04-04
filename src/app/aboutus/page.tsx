@@ -1,22 +1,13 @@
-import React from "react";
-import { Navbar } from "@/components/landing/Navbar";
-import { FooterSection } from "@/components/landing/FooterSection";
 import { AboutUsComponent } from "@/components/landing/AboutUsComponent";
 
 const page = () => {
-  return (
-    <>
-      {/*Header Section*/}
-      <Navbar />
+	return (
+		<>
+			{/*About us Section*/}
 
-      {/*About us Section*/}
-
-      <AboutUsComponent />
-
-      {/*Footer Section*/}
-      <FooterSection />
-    </>
-  );
+			<AboutUsComponent />
+		</>
+	);
 };
 
 export default page;
