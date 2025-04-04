@@ -14,6 +14,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { formSchema } from "@/lib/types/globals";
@@ -25,6 +27,7 @@ type RegisterFormData = z.infer<typeof formSchema>;
 
 function Register() {
   const [submitted, setSubmitted] = useState(false);
+  const imageUrl = "/images/library-4.jpg";
 
   const form = useForm<RegisterFormData>({
     resolver: zodResolver(formSchema),
@@ -65,12 +68,21 @@ function Register() {
 
   return (
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
-      {/* Placeholder para la imagen */}
+      {/* Imagen de fondo*/}
+
       <div className="hidden lg:flex flex-1 items-center justify-center p-8">
-        <div className="w-full max-w-md h-auto bg-gray-200 dark:bg-gray-800 flex items-center justify-center rounded-lg shadow-md p-10">
-          <span className="text-gray-500 dark:text-gray-400 text-xl text-center">
-            Espacio para una imagen o ilustración atractiva
-          </span>
+        <div className="w-full max-w-md overflow-hidden rounded-lg shadow-md aspect-square bg-gray-200 dark:bg-gray-800">
+          {" "}
+          {/* Añadido aspect-square y bg para placeholder */}
+          <Image
+            src={imageUrl}
+            alt="Ilustración de biblioteca" // Alt text descriptivo
+            width={700} // Ancho intrínseco (ajusta según tu imagen para mejor optimización)
+            height={700} // Alto intrínseco (ajusta según tu imagen)
+            className="object-cover w-full h-full" // Asegura que la imagen cubra el contenedor
+            priority // Opcional: Carga la imagen antes si es importante
+            unoptimized={process.env.NODE_ENV === "development"} // Útil si tienes problemas con la optimización localmente
+          />
         </div>
       </div>
 
