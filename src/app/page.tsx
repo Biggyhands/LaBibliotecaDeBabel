@@ -16,7 +16,7 @@ export default function Home() {
 
       <HeroSection />
 
-      {/*  <BooksPreviewSection />  working on what to display here */}
+      {/*    working on what to display here */}
 
       {/*Section cómo funciona*/}
 
