@@ -1,3 +1,4 @@
+import * as z from "zod";
 /*Utilizado en frase de autor famoso*/
 export interface Quote {
   autor: string;
@@ -54,3 +55,30 @@ export interface TechnologyInfo {
   name: string;
   icon: React.ReactNode;
 }
+
+//Utilizado como validacion en el formulario de registro
+
+export const formSchema = z
+  .object({
+    username: z.string().min(3, {
+      message: "El usuario debe tener al menos 3 caracteres.",
+    }),
+    firstName: z.string().min(1, {
+      message: "El nombre es requerido.",
+    }),
+    lastName: z.string().min(1, {
+      message: "El apellido es requerido.",
+    }),
+    email: z.string().email({
+      message: "Por favor, introduce un correo electrónico válido.",
+    }),
+    password: z.string().min(8, {
+      message: "La contraseña debe tener al menos 8 caracteres.",
+    }),
+    confirmPassword: z.string(),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    // Validación para que las contraseñas coincidan
+    message: "Las contraseñas no coinciden.",
+    path: ["confirmPassword"], // Indica qué campo mostrará el error
+  });

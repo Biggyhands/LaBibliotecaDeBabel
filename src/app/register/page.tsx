@@ -1,7 +1,13 @@
 import React from "react";
 
+import Register from "@/components/forms/Register";
+
 function page() {
-  return <div>Registration</div>;
+  return (
+    <>
+      <Register />
+    </>
+  );
 }
 
 export default page;
