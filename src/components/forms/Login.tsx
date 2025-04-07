@@ -23,6 +23,7 @@ import { loginSchema, LoginFormData } from "@/lib/types/globals";
 
 // Importa tu componente externo ForgotPasswordForm
 import ForgotPasswordForm from "./ForgotPasswordForm"; // <-- AJUSTA LA RUTA si es necesario
+import { useRouter } from "next/navigation";
 
 // --- Componente Principal de Login ---
 function Login() {
@@ -30,6 +31,7 @@ function Login() {
 
   // Estado para controlar qué vista mostrar: 'login' o 'forgotPassword'
   const [viewMode, setViewMode] = useState<"login" | "forgotPassword">("login");
+  const router = useRouter(); // Hook de Next.js para redirección
 
   // --- Configuración del Formulario de Login ---
   const loginForm = useForm<LoginFormData>({
@@ -37,20 +39,35 @@ function Login() {
     defaultValues: { username: "", password: "" },
   });
 
-  /**
-   * Maneja el envío del formulario de inicio de sesión.
-   * Simula una llamada a la API para autenticar al usuario.
-   *
-   * @param {LoginFormData} values - Datos del formulario.
-   */
   async function onLoginSubmit(values: LoginFormData) {
-    console.log("Intentando iniciar sesión con:", values);
-    toast.info("Iniciando sesión...");
     // --- Lógica de Login (Placeholder) ---
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast.success("Inicio de sesión exitoso (Simulado)", {
-      description: `¡Bienvenido de vuelta, ${values.username}!`,
-    });
+
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) {
+        throw new Error("Error al ingresar el usuario");
+      }
+      toast.success("ingreso  Exitoso", {
+        description: `Bienvenido, ${values.username}!`,
+      });
+
+      const data = response.json();
+      console.log("Usuario ingresado:", data);
+
+      router.push("/");
+    } catch (error) {
+      console.error("Error al ingresar el usuario:", error);
+      toast.error("Error al ingresar  el usuario", {
+        description: "Por favor, intenta de nuevo.",
+      });
+      return;
+    }
     // Aquí podrías redirigir si el login fuera real
   }
 

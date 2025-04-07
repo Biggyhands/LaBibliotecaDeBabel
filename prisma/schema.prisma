@@ -24,3 +24,15 @@ enum Role {
   USER
   ADMIN
 }
+
+
+model Books {
+  id        String   @id @default(cuid())
+  title     String
+  author    String
+  genre     String
+  published DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
