@@ -82,3 +82,26 @@ export const formSchema = z
     message: "Las contraseñas no coinciden.",
     path: ["confirmPassword"], // Indica qué campo mostrará el error
   });
+
+//Utilizado como validacion en el formulario de login
+
+export const loginSchema = z.object({
+  username: z.string().min(3, {
+    // Validamos longitud mínima para username
+    message: "El nombre de usuario debe tener al menos 3 caracteres.",
+  }),
+  password: z.string().min(1, {
+    message: "La contraseña es requerida.",
+  }),
+});
+
+export type LoginFormData = z.infer<typeof loginSchema>;
+
+//Utilizado como validacion en el formulario de recuperar contraseña
+
+export const forgotPasswordSchema = z.object({
+  email: z
+    .string()
+    .email({ message: "Por favor, introduce un correo electrónico válido." }),
+});
+export type ForgotPasswordFormData = z.infer<typeof forgotPasswordSchema>;
