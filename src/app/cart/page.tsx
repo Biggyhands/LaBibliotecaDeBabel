@@ -5,6 +5,7 @@ import { useCart } from "@/lib/context/cart-context";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ShoppingCart } from "lucide-react";
 
 export default function CartPage() {
   const { cartItems, removeFromCart } = useCart();
@@ -30,7 +31,10 @@ export default function CartPage() {
             ✅ ¡Pago realizado con éxito! Disfruta tu compra.
           </div>
         ) : cartItems.length === 0 ? (
-          <p className="text-center text-gray-500">Tu carrito está vacío.</p>
+          <div className="flex flex-col items-center justify-center text-gray-500">
+            <ShoppingCart className="w-16 h-16 mb-4" />
+            <p className="text-lg">Tu carrito está vacío.</p>
+          </div>
         ) : (
           <div className="flex flex-col lg:flex-row justify-center gap-8">
             {/* Lista de productos */}
