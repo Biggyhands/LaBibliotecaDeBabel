@@ -147,9 +147,9 @@ export default function BookDetailsPage() {
           />
           <Button
             type="submit"
-            className="bg-gray-900 hover:bg-gray-700 text-white text-sm"
+            className="bg-gray-900 hover:bg-gray-700 text-white text-sm cursor-pointer"
           >
-            Submit
+            Enviar
           </Button>
         </form>
       </div>

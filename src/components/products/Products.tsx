@@ -59,6 +59,7 @@ function Pagination({
         variant="outline"
         onClick={() => setPage(page - 1)}
         disabled={page === 1}
+        className="cursor-pointer"
       >
         Página anterior
       </Button>
@@ -69,6 +70,7 @@ function Pagination({
         variant="outline"
         onClick={() => setPage(page + 1)}
         disabled={!hasNextPage}
+        className="cursor-pointer"
       >
         Siguiente página
       </Button>
