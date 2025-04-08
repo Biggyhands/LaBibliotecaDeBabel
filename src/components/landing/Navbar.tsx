@@ -42,8 +42,13 @@ export function Navbar() {
 						<span className='text-2xl font-bold ml-2 hidden sm:block'>La Biblioteca de Babel</span>
 					</Link>
 					{session && session.role === "ADMIN" && (
-						<ul>
-							<Link href='/admin'>{"Admin Route(TEST)"}</Link>
+						<ul className='text-gray-500  flex space-x-4 ml-4'>
+							<li className='hover:text-gray-700'>
+								<Link href='/create-books'>Add Books</Link>
+							</li>
+							<li className='hover:text-gray-700'>
+								<Link href='/manage-users'>Manage Users</Link>
+							</li>
 						</ul>
 					)}
 				</div>
@@ -51,7 +56,9 @@ export function Navbar() {
 				{isLoading ? (
 					<div>Loading...</div>
 				) : session ? (
-					<Button onClick={handleLogOut}>Cerrar sesión</Button>
+					<Button className='hover:cursor-pointer' onClick={handleLogOut}>
+						Cerrar sesión
+					</Button>
 				) : (
 					<div className='ml-auto flex items-center space-x-4'>
 						<Button variant='outline'>

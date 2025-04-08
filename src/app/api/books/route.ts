@@ -3,7 +3,6 @@ import { prisma } from "@/lib/db";
 import { z } from "zod";
 
 const BookSchema = z.object({
-	id: z.string().cuid(),
 	title: z.string(),
 	author: z.string(),
 	genre: z.string(),
@@ -19,6 +18,7 @@ export async function GET(req: NextRequest) {
 	try {
 		const books = await prisma.books.findMany({
 			select: {
+				id: true,
 				title: true,
 				author: true,
 				genre: true,
