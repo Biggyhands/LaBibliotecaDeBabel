@@ -10,7 +10,7 @@ Bienvenido a **La Biblioteca de Babel**, esta aplicación web fue desarrollada c
 - Registro de usuarios con roles de usuario normal y administrador.
 - Visualización de una  colección de libros de diferentes géneros y épocas.
 - Funcionalidad de agregar libros al carrito y verificar la lista de compra
--Como administrador se puede gestionar la creacion de libros y de los usuarios registrados.
+- Como administrador se puede gestionar la creacion de libros y de los usuarios registrados.
 
 
 ## 🛠 Tecnologías Utilizadas
