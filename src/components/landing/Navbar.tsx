@@ -88,7 +88,9 @@ export function Navbar() {
               </Link>
             </li>
             <li>
-              <Button onClick={logOut}>Cerrar sesión</Button>
+              <Button onClick={logOut} className="cursor-pointer">
+                Cerrar sesión
+              </Button>
             </li>
           </ul>
         )}
