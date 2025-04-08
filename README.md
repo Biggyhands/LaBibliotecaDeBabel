@@ -1,27 +1,17 @@
 # 📚 La Biblioteca de Babel
 
-Bienvenido a **La Biblioteca de Babel**, una aplicación web inspirada en el cuento de Jorge Luis Borges. Nuestra biblioteca digital busca crear un espacio infinito de conocimiento y descubrimiento literario.
+Bienvenido a **La Biblioteca de Babel**, esta aplicación web fue desarrollada con dedicación como proyecto para la materia de Front-end, correspondiente al séptimo semestre de la carrera de ingenieria de software en el politecnico Grancolombiano.
 
 ---
 
 ## ✨ Funcionalidades Actuales
 
-- Visualización de una amplia colección de libros de diferentes géneros y épocas.
+-Visualización de pagian de inicio con información de contacto.
 - Registro de usuarios con roles de usuario normal y administrador.
-- Creación de salas de lectura virtuales y espacios colaborativos.
-- Comunidad activa de lectores para compartir experiencias y recomendaciones.
-- Acceso universal para conectar con lectores de todo el mundo.
+- Visualización de una  colección de libros de diferentes géneros y épocas.
+- Funcionalidad de agregar libros al carrito y verificar la lista de compra
+-Como administrador se puede gestionar la creacion de libros y de los usuarios registrados.
 
----
-
-## 🌱 Posibles Funcionalidades Futuras
-
-- Implementación de comentarios y valoraciones de libros.
-- Funcionalidad de búsqueda avanzada por autor, género, etc.
-- Sugerencias de libros personalizadas para usuarios registrados.
-- Incorporación de funcionalidades sociales como clubes de lectura virtuales.
-
----
 
 ## 🛠 Tecnologías Utilizadas
 
@@ -73,6 +63,3 @@ npm run dev
 
 - prisma: Configuración y migraciones de la base de datos.
 
-## 🤝 Contribución
-
-Si deseas contribuir a este proyecto, ¡eres bienvenido! Siéntete libre de abrir un pull request con tus mejoras o correcciones.
