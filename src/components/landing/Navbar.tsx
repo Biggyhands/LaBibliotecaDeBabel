@@ -68,7 +68,9 @@ export function Navbar() {
             </li>
 
             <li>
-              <Button onClick={logOut}>Cerrar sesión</Button>
+              <Button onClick={logOut} className="cursor-pointer">
+                Cerrar sesión
+              </Button>
             </li>
           </ul>
         )}
@@ -94,14 +96,10 @@ export function Navbar() {
         {!session?.role && (
           <div className="ml-auto flex items-center space-x-4">
             <Button variant="outline">
-              <Link href="/login" className={linkStyle("/login")}>
-                Ingresar
-              </Link>
+              <Link href="/login">Ingresar</Link>
             </Button>
             <Button>
-              <Link href="/register" className={linkStyle("/register")}>
-                Registrarse
-              </Link>
+              <Link href="/register">Registrarse</Link>
             </Button>
           </div>
         )}
