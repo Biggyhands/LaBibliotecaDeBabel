@@ -26,6 +26,7 @@ export function Navbar() {
     router.push("/"); // Redirigir al inicio después de cerrar sesión
   };
 
+
   // Estilo condicional para los links activos
   const linkStyle = (href: string) =>
     `px-3 py-1 rounded-md ${

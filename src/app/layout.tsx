@@ -22,18 +22,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="es">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <SessionProvider>
-          <CartProvider>
-            <Navbar />
-            <main className="flex-grow bg-background">{children}</main>
-            <Toaster />
-            <FooterSection />
-          </CartProvider>
-        </SessionProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang='es'>
+			<body className={inter.className + "flex flex-col justify-between"}>
+				<SessionProvider>
+					<Navbar />
+					<main className=' bg-background'>{children}</main>
+
+					<Toaster />
+					<FooterSection />
+				</SessionProvider>
+			</body>
+		</html>
+	);
+
 }
