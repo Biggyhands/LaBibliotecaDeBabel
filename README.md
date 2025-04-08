@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 La Biblioteca de Babel
 
-## Getting Started
+Bienvenido a **La Biblioteca de Babel**, una aplicación web inspirada en el cuento de Jorge Luis Borges. Nuestra biblioteca digital busca crear un espacio infinito de conocimiento y descubrimiento literario.
 
-First, run the development server:
+---
+
+## ✨ Funcionalidades Actuales
+
+- Visualización de una amplia colección de libros de diferentes géneros y épocas.
+- Registro de usuarios con roles de usuario normal y administrador.
+- Creación de salas de lectura virtuales y espacios colaborativos.
+- Comunidad activa de lectores para compartir experiencias y recomendaciones.
+- Acceso universal para conectar con lectores de todo el mundo.
+
+---
+
+## 🌱 Posibles Funcionalidades Futuras
+
+- Implementación de comentarios y valoraciones de libros.
+- Funcionalidad de búsqueda avanzada por autor, género, etc.
+- Sugerencias de libros personalizadas para usuarios registrados.
+- Incorporación de funcionalidades sociales como clubes de lectura virtuales.
+
+---
+
+## 🛠 Tecnologías Utilizadas
+
+- **Next.js**: Framework de React para renderizado del lado del servidor.
+- **React.js**: Biblioteca JavaScript para construcción de interfaces.
+- **Tailwind CSS**: Framework de diseño CSS para estilización rápida.
+- **shadcn/ui**: Componentes reutilizables para la interfaz de usuario.
+- **Prisma**: ORM para base de datos con soporte para PostgreSQL.
+- **Lucide React**: Iconos vectoriales para elementos visuales.
+
+---
+
+## ⚙️ Instalación y Configuración del Proyecto
+
+### Requisitos Previos
+
+- Tener **Node.js** y **npm** instalados en tu máquina.
+- Clonar este repositorio desde GitHub.
+
+### Pasos de Instalación
+
+1. Clonar el repositorio:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tuusuario/labibliotecadebabel.git
+cd labibliotecadebabel
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instalar las dependencias del proyecto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Configurar la base de datos:
+   Configura las variables de entorno en un archivo .env con las credenciales de la base de datos.
 
-## Learn More
+4. Ejecutar el servidor de desarrollo:
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estructura de Carpetas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- src: Contiene el código fuente de la aplicación.
 
-## Deploy on Vercel
+- public: Incluye los recursos estáticos como imágenes y archivos públicos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- prisma: Configuración y migraciones de la base de datos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contribución
+
+Si deseas contribuir a este proyecto, ¡eres bienvenido! Siéntete libre de abrir un pull request con tus mejoras o correcciones.
