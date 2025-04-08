@@ -132,21 +132,27 @@ export default function BookDetailsPage() {
 				</div>
 			</div>
 
-			{/* Newsletter */}
-			<div className='text-center border-t pt-8'>
-				<h3 className='font-semibold mb-1'>Follow the latest trends</h3>
-				<p className='text-sm text-gray-500 mb-4'>With our daily newsletter</p>
-				<form className='flex flex-col sm:flex-row gap-2 justify-center items-center'>
-					<input
-						type='email'
-						placeholder='you@example.com'
-						className='border px-4 py-2 rounded text-sm w-full sm:w-72'
-					/>
-					<Button type='submit' className='bg-gray-900 hover:bg-gray-700 text-white text-sm'>
-						Submit
-					</Button>
-				</form>
-			</div>
-		</div>
-	);
+
+
+      {/* Newsletter */}
+      <div className="text-center border-t pt-8">
+        <h3 className="font-semibold mb-1">Follow the latest trends</h3>
+        <p className="text-sm text-gray-500 mb-4">With our daily newsletter</p>
+        <form className="flex flex-col sm:flex-row gap-2 justify-center items-center">
+          <input
+            type="email"
+            placeholder="you@example.com"
+            className="border px-4 py-2 rounded text-sm w-full sm:w-72"
+          />
+          <Button
+            type="submit"
+            className="bg-gray-900 hover:bg-gray-700 text-white text-sm cursor-pointer"
+          >
+            Enviar
+          </Button>
+        </form>
+      </div>
+    </div>
+  );
+
 }

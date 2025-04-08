@@ -82,6 +82,7 @@ function LoadingGrid() {
 			))}
 		</div>
 	);
+
 }
 
 export default function Products() {
